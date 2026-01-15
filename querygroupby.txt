@@ -1,0 +1,18 @@
+1 SELECT 
+    YEAR(enrolment_date) AS annoIscrizione,
+    COUNT(*) AS numero_iscritti
+FROM students
+GROUP BY YEAR(enrolment_date)
+ORDER BY annoIscrizione;
+
+2 SELECT office_address, COUNT(*) AS numero_insegnanti
+FROM teachers
+GROUP BY office_address
+ORDER BY numero_insegnanti DESC;
+
+3 SELECT exam_id, AVG(vote) AS media_voti
+FROM exam_student
+GROUP BY exam_id
+ORDER BY exam_id;
+
+4 SELECT department_id, COUNT(*) AS numero_corsi FROM degrees GROUP BY department_id ORDER BY numero_corsi DESC;
